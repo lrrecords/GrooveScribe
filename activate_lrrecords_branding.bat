@@ -24,8 +24,8 @@ echo   Next Steps:
 echo ==========================================
 echo.
 echo 1. Update your brand colors in these files:
-echo    - css\groove_writer_lrrecords.css (lines 10-18)
-echo    - css\groove_display_lrrecords.css (lines 5-13)
+echo    - css\groove_writer_lrrecords.css (lines 14-19)
+echo    - css\groove_display_lrrecords.css (lines 6-11)
 echo.
 echo 2. Add your logo files to the images\ folder:
 echo    - Main logo (SVG recommended)

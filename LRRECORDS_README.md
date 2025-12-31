@@ -33,13 +33,13 @@ You need to get the exact blue and orange hex codes from your LRRecords logo.
 
 **Then update these two files:**
 
-**File 1:** `css/groove_writer_lrrecords.css` (lines 10-18)
+**File 1:** `css/groove_writer_lrrecords.css` (lines 14-19)
 ```css
 --lrrecords-blue-primary: #YOUR_BLUE_HERE;
 --lrrecords-orange-primary: #YOUR_ORANGE_HERE;
 ```
 
-**File 2:** `css/groove_display_lrrecords.css` (lines 5-13)
+**File 2:** `css/groove_display_lrrecords.css` (lines 6-11)
 ```css
 --lrrecords-blue-primary: #YOUR_BLUE_HERE;
 --lrrecords-orange-primary: #YOUR_ORANGE_HERE;

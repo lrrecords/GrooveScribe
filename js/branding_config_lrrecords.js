@@ -36,8 +36,8 @@ var BrandingConfig = {
 // INSTRUCTIONS FOR CUSTOMIZATION:
 // 
 // 1. COLORS: Edit the CSS files to match your exact brand colors:
-//    - css/groove_writer_lrrecords.css (lines 10-18)
-//    - css/groove_display_lrrecords.css (lines 5-13)
+//    - css/groove_writer_lrrecords.css (lines 14-19)
+//    - css/groove_display_lrrecords.css (lines 6-11)
 //    
 //    Current placeholder colors:
 //    - Blue Primary: #0A2463 (Navy Blue) - REPLACE WITH YOUR BLUE
