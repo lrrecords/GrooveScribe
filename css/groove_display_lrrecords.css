@@ -1,0 +1,226 @@
+/* LRRecords Custom Branding for Groove Display */
+/* Based on blue and orange color scheme from LRRecords logo */
+
+:root {
+	/* LRRecords Brand Colors - must match groove_writer_lrrecords.css */
+	--lrrecords-blue-primary: #0A2463;
+	--lrrecords-blue-dark: #061741;
+	--lrrecords-blue-light: #1E3A8A;
+	--lrrecords-orange-primary: #FB6107;
+	--lrrecords-orange-dark: #D14F00;
+	--lrrecords-orange-light: #FF8C42;
+	
+	/* Header colors */
+	--header-bg-color: #0A2463;
+	--header-bg-start-color: #1E3A8A;
+	--header-bg-end-color: #061741;
+	
+	/* Component colors */
+	--bpm-bg-color: #1a1a1a;
+	--side-bg-color: #2a2a2a;
+	--bottom-bg-color: #2a2a2a;
+	--side-highlight-bg-color: #FB6107;
+	--note-overlay-bg-color: #FFE5D9;
+
+	/* Highlight colors */
+	--highlight-color: #FB6107;
+	--highlight-color-on-white: #0A2463;
+}
+
+/* this is for debugging layout issues */
+DEBUG {
+	border: 1px solid red;
+}
+
+body {
+	background-color: var(--lrrecords-bg-medium, #2a2a2a);
+}
+
+.warnings {
+	font-family: monospace;
+	display: none;
+}
+
+.Printable {
+	display: block;
+}
+.nonPrintable {
+	display: block;
+}
+
+/* SVG Target styling */
+.svgTarget {
+	width: 100%;
+}
+.svgTarget svg {
+	width: 100%;
+	height: calc(100%);
+}
+
+/* Player controls */
+.playerControl {
+	display: inline-block;
+	background-color: var(--bpm-bg-color);
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	white-space: nowrap;
+	border: 2px solid var(--lrrecords-orange-primary);
+	border-radius: 5px;
+}
+
+.playerControl.large {
+	display: block;
+	width: calc(50% - 83px);
+	position: fixed;
+	left: 83px;
+	top: 56px;
+	z-index: 95;
+	border-bottom: 3px solid var(--lrrecords-orange-primary);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* BPM display */
+.BPMDisplay {
+	display: inline-block;
+	background-color: var(--lrrecords-blue-primary);
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin: 5px;
+	font-weight: bold;
+	border: 1px solid var(--lrrecords-orange-primary);
+}
+
+/* Play button */
+.playButton {
+	display: inline-block;
+	background-color: var(--lrrecords-orange-primary);
+	color: white;
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.2s ease;
+	border: 1px solid var(--lrrecords-orange-dark);
+}
+
+.playButton:hover {
+	background-color: var(--lrrecords-orange-light);
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.playButton.playing {
+	background-color: var(--lrrecords-blue-light);
+	border-color: var(--lrrecords-blue-primary);
+}
+
+/* Tempo slider */
+.tempoSlider {
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: middle;
+}
+
+.tempoSlider input[type="range"] {
+	width: 200px;
+	height: 8px;
+	border-radius: 5px;
+	background: linear-gradient(to right, var(--lrrecords-blue-primary), var(--lrrecords-orange-primary));
+	outline: none;
+}
+
+.tempoSlider input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--lrrecords-orange-primary);
+	cursor: pointer;
+	border: 2px solid white;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.tempoSlider input[type="range"]::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--lrrecords-orange-primary);
+	cursor: pointer;
+	border: 2px solid white;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Sheet music styling */
+#sheetMusicDiv {
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	margin: 20px 0;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	border: 3px solid var(--lrrecords-orange-primary);
+}
+
+/* Progress bar */
+.progressBar {
+	width: 100%;
+	height: 10px;
+	background-color: var(--lrrecords-blue-dark);
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 10px 0;
+	border: 1px solid var(--lrrecords-orange-primary);
+}
+
+.progressBar .progress {
+	height: 100%;
+	background: linear-gradient(to right, var(--lrrecords-blue-primary), var(--lrrecords-orange-primary));
+	transition: width 0.1s linear;
+}
+
+/* Context menus */
+.noteContextMenu {
+	background-color: white;
+	border: 2px solid var(--lrrecords-blue-primary);
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.noteContextMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.noteContextMenu li {
+	padding: 10px 15px;
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+	transition: all 0.2s ease;
+}
+
+.noteContextMenu li:hover {
+	background-color: var(--lrrecords-orange-light);
+	color: white;
+}
+
+.noteContextMenu li:last-child {
+	border-bottom: none;
+}
+
+/* Print styles */
+@media print {
+	.playerControl,
+	.nonPrintable {
+		display: none !important;
+	}
+	
+	#sheetMusicDiv {
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+}

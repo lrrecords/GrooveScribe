@@ -1,0 +1,254 @@
+/* LRRecords Custom Branding for Groove Writer */
+/* Based on blue and orange color scheme from LRRecords logo */
+/* 
+ * TO CUSTOMIZE: Replace the color values below with your exact brand colors
+ * Common blue/orange combinations:
+ * - Navy Blue (#0A2463) + Bright Orange (#FB6107)
+ * - Royal Blue (#1E3A8A) + Coral Orange (#FF6B35)
+ * - Sky Blue (#2484C0) + Burnt Orange (#E86A33)
+ * - Deep Blue (#003F88) + Vibrant Orange (#FF8C00)
+ */
+
+:root {
+	/* LRRecords Brand Colors - CUSTOMIZE THESE */
+	--lrrecords-blue-primary: #0A2463;      /* Main blue from logo */
+	--lrrecords-blue-dark: #061741;         /* Darker blue for accents */
+	--lrrecords-blue-light: #1E3A8A;        /* Lighter blue for highlights */
+	--lrrecords-orange-primary: #FB6107;    /* Main orange from logo */
+	--lrrecords-orange-dark: #D14F00;       /* Darker orange for accents */
+	--lrrecords-orange-light: #FF8C42;      /* Lighter orange for highlights */
+	
+	/* Background colors */
+	--lrrecords-bg-dark: #1a1a1a;
+	--lrrecords-bg-medium: #2a2a2a;
+	--lrrecords-bg-light: #3a3a3a;
+	
+	/* Text colors */
+	--lrrecords-text-light: #ffffff;
+	--lrrecords-text-medium: #e0e0e0;
+}
+
+/* this is for debugging layout issues - puts a red border around everything */
+/* body * { border: 1px solid red; }		 */
+DEBUG {
+	border: 1px solid red;
+}
+body {
+	/* Use GrooveWriter instead of body for easy embedding */
+	margin: 0px;
+	height: 100vh;
+	background-color: var(--lrrecords-bg-dark);
+}
+#GrooveWriter {
+	/* tag surrounds entire app */
+	position: relative;
+	background-color: var(--lrrecords-bg-dark);
+	width: 100%;
+	min-width: 800px;
+	font: 100%/normal 'Lato', Calibri, sans-serif;
+}
+
+.fullWidthEle {
+	max-width: 1478px; /* 1550 - 72 */
+}
+.warnings {
+	font-family: monospace;
+	display: none;
+}
+
+.Printable {
+	display: block;
+}
+.nonPrintable {
+	display: block;
+}
+
+#LeftHandNav {
+	width: 70px;
+	height: 100%;
+	position: fixed;
+	background: linear-gradient(to bottom, var(--lrrecords-blue-primary), var(--lrrecords-blue-dark));
+	border-right: 3px solid var(--lrrecords-orange-primary);
+	z-index: 100;
+	white-space: nowrap;
+}
+
+/* Logo in subdivision area */
+#logoInSubdivision {
+	display: block;
+	width: 100%;
+	height: 70px;
+	background-color: var(--lrrecords-blue-dark);
+	border-bottom: 2px solid var(--lrrecords-orange-primary);
+}
+
+#logoInSubdivision img {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* Left navigation buttons */
+.left-button {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 55px;
+	border-bottom: 1px solid var(--lrrecords-blue-dark);
+	background-color: var(--lrrecords-blue-primary);
+	color: var(--lrrecords-text-light);
+	text-align: center;
+	font-size: 9pt;
+	transition: all 0.2s ease;
+}
+
+.left-button:hover {
+	background-color: var(--lrrecords-blue-light);
+	border-left: 3px solid var(--lrrecords-orange-primary);
+}
+
+.left-button.selected {
+	background-color: var(--lrrecords-orange-primary);
+	border-left: 3px solid var(--lrrecords-orange-dark);
+	color: var(--lrrecords-text-light);
+}
+
+.left-button-content {
+	display: table-cell;
+	width: 70px;
+	height: 55px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* Top navigation bar */
+#TopNav {
+	position: fixed;
+	top: 0px;
+	left: 70px;
+	height: 55px;
+	width: calc(100% - 70px);
+	background: linear-gradient(to right, var(--lrrecords-blue-primary), var(--lrrecords-blue-light));
+	border-bottom: 3px solid var(--lrrecords-orange-primary);
+	z-index: 99;
+	color: var(--lrrecords-text-light);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Logo in top left */
+#logoTextUpperLeft {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	height: 45px;
+	max-width: 200px;
+}
+
+#logoTextUpperLeft img {
+	height: 100%;
+	width: auto;
+}
+
+/* Right side buttons in top nav */
+.rightButtons {
+	display: inline-block;
+	padding: 15px 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 5px;
+	color: var(--lrrecords-text-light);
+	transition: all 0.2s ease;
+}
+
+.rightButtons:hover {
+	background-color: var(--lrrecords-orange-primary);
+	color: var(--lrrecords-text-light);
+}
+
+/* Bottom buttons */
+.pageBottomButton {
+	display: inline-block;
+	width: 130px;
+	height: 80px;
+	margin: 10px;
+	padding: 10px;
+	background-color: var(--lrrecords-blue-primary);
+	color: var(--lrrecords-text-light);
+	border: 2px solid var(--lrrecords-orange-primary);
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.2s ease;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.pageBottomButton:hover {
+	background-color: var(--lrrecords-orange-primary);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.bottomButtonLabel {
+	display: block;
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 11pt;
+}
+
+/* Right hand content area */
+#RightHandContent {
+	position: relative;
+	margin-left: 70px;
+	margin-top: 55px;
+	padding: 20px;
+	background-color: var(--lrrecords-bg-medium);
+}
+
+/* Metronome buttons */
+.metronomeButton {
+	display: inline-block;
+	padding: 8px 15px;
+	margin: 0 3px;
+	background-color: var(--lrrecords-blue-primary);
+	color: var(--lrrecords-text-light);
+	border: 1px solid var(--lrrecords-orange-primary);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.metronomeButton:hover {
+	background-color: var(--lrrecords-orange-light);
+}
+
+.metronomeButton.selected {
+	background-color: var(--lrrecords-orange-primary);
+	border-color: var(--lrrecords-orange-dark);
+	font-weight: bold;
+}
+
+/* Undo button special styling */
+#undoButton {
+	border-top: 1px solid var(--lrrecords-orange-primary);
+	margin-top: 20px;
+}
+
+/* Print styles - preserve for printing */
+@media print {
+	#LeftHandNav,
+	#TopNav,
+	.nonPrintable {
+		display: none !important;
+	}
+	
+	#RightHandContent {
+		margin: 0;
+		padding: 0;
+	}
+	
+	body {
+		background-color: white;
+	}
+}
